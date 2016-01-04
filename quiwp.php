@@ -3,9 +3,9 @@
 * Name: QuiWP 
 * Description: QuiWP: Quick Wordpress Plugins is a php class with collections of functions and controls used to make wordpress plugins quick and easy. 
 * Version: 0.1
-* Author: Venu Gopal Chaladi, Sushma Sreemantula
+* Author: Venu Gopal Chaladi, Sushma Srimanthula, Bala Rajini Chaladi
 * URL: http://www.dhrusya.com
-* Author Email: gopal@dhrusya.com, sushma@dhrusya.com
+* Author Email: gopal@dhrusya.com, sushma@dhrusya.com, rajini@dhrusya.com
 */
 	class dswp{
 		public $taxdata='';
