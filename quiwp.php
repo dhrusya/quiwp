@@ -1,12 +1,5 @@
 <?php
-/*
-* Name: QuiWP 
-* Description: QuiWP: Quick Wordpress Plugins is a php class with collections of functions and controls used to make wordpress plugins quick and easy. 
-* Version: 0.1
-* Author: Venu Gopal Chaladi, Bala Rajini Chaladi, Sushma Srimanthula
-* URL: http://www.dhrusya.com
-* Author Email: gopal@dhrusya.com, rajini@dhrusya.com, srisushmareddy@gmail.com
-*/
+
 	class dswp{
 		public $taxdata='';
 		public $posttypemeta='';
@@ -233,12 +226,22 @@
 	     						$html.="<textarea name=\"ds_pmeta[$name]\" $id $required>$value</textarea>";
 	     					break;
 	     					case 'select':
-	     						$multiple=!empty($multiple)?' multiple':'';
-	     						$html.="<select name=\"ds_pmeta[$name]\" $id $required $multiple>";
-	     						//print_r($value);
+	     						$multiple=!empty($multiple)?' multiple':false;
+								//print_r($value);
+								if($multiple){
+		     						$html.="<select name=\"ds_pmeta[$name][]\" $id $required $multiple autocomplete=\"off\">";
+								}else{
+									$html.="<select name=\"ds_pmeta[$name]\" $id $required>";
+								}
 	     						$html.="<option value=\"\">Select Any</option>";
 	     							foreach ($options as $k => $v) {
-	     								$selected=($k==$value)?'selected="selected"':"";
+										if($multiple){
+											$vals=explode(",",$value);
+											$selected=(in_array($k,$vals))?'selected="selected"':"";
+												
+										}else{
+	     									$selected=($k==$value)?'selected="selected"':"";
+										}
 	     								$html.="<option value=\"$k\" $selected>$v</option>";
 	     							}
 	     						$html.="</select>"; 
@@ -349,3 +352,4 @@
 		
     }//class ends
 	
+?>
