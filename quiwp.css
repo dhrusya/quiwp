@@ -1,0 +1,22 @@
+/* quiwp CSS Document */
+.dswp_content_block label{
+	display:block;
+	font-weight:bold;	
+}
+
+.dswp_content_block .ds_field_image input[type=url]{
+	width:75%;
+}
+
+.dswp_content_block .ds_field_image input[type=button]{
+	border: medium none;
+    margin: 0;
+    padding: 5px 0;
+    width: 20%;
+}
+
+
+#map_canvas{
+	min-height:400px;
+	width:100%;
+}
