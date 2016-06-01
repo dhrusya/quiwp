@@ -1,5 +1,5 @@
 # quiwp
-QuiWP: Quick Wordpress Plugins is a php class with collections of functions and controls used to make wordpress plugins quick and easy.
+QuiWP: Quick Wordpress Plugins is a php class with collection of functions and controls used to make wordpress plugins quick and easy.
 
 Build Custom post types, custom taxonomies, Custom post type fields in a moment.
 
