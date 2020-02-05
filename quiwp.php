@@ -871,7 +871,7 @@ function ds_createuser(){
         function ds_pp_admin_scripts()
         {
 
-            // wp_register_script('ds-google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyDgauP3PgIPT44NG-bgTxll8z8vQZrjQ4w&sensor=false');
+            // wp_register_script('ds-google-maps', '//maps.googleapis.com/maps/api/js?key=&sensor=false');
             // wp_enqueue_script('ds-google-maps');
         }
     }//class ends
