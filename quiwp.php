@@ -37,7 +37,20 @@
             $puralname=ucfirst($puralname);
             $icon=!empty($icon)?$icon:'';
             $show_in_menu=!empty($show_in_menu)?$show_in_menu:true;
-            $array= array('title','editor','thumbnail');
+            $support = array (
+                          'title',
+                          'editor',
+                          'author',
+                          'thumbnail',
+                          'custom-fields',
+                          'comments',
+                          'genesis-seo',
+                          'genesis-layouts',
+                          'revisions',
+                          // Add this to supports
+                          'page-attributes',
+                      );
+            $array= array('title','editor','thumbnail', 'page-attributes');
             $hierarchical=!empty($hierarchical)?$hierarchical:false;
             $supports=$array;
             if (!empty($notsupported) and is_array($notsupported)) {
@@ -308,6 +321,9 @@
                         }
                         if (isset($fdata['multiple'])) {
                             $args['multiple']=$multiple;
+                        }
+                        if (isset($fdata['options'])) {
+                            $args['options']=$options;
                         }
                         if (isset($fdata['fetchsubitems'])) {
                             $args['fetchsubitems']=$fetchsubitems;
