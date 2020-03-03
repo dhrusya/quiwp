@@ -529,9 +529,9 @@ function ds_createuser(){
               }
               $html.="<option value=\"\">Select Any</option>";
               foreach ($options as $k => $v) {
+                
                   if ($multiple) {
-                      $vals=explode(",", $value);
-                      $selected=(in_array($k, $vals))?'selected="selected"':"";
+                      $selected=(in_array($v, $value))?' selected="selected"':"";
                   } else {
                       $selected=($k==$value)?'selected="selected"':"";
                   }
